@@ -1,5 +1,8 @@
+import 'dart:ffi';
+
 import 'package:day_night_switcher/day_night_switcher.dart';
 import 'package:flutter/material.dart';
+import 'package:pmsn/screens/global_values.dart';
 
 class DashboardScreen extends StatefulWidget{
   DashboardScreen({super.key});
@@ -9,7 +12,7 @@ class DashboardScreen extends StatefulWidget{
 }
 
 class _DashboardScreenState extends State<DashboardScreen> {
-  bool isDarkModeEnabled = true;
+ 
 
   @override
   Widget build(BuildContext context){
@@ -41,11 +44,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
             onTap: (){},
           ),
           DayNightSwitcher(
-            isDarkModeEnabled: isDarkModeEnabled,
+            isDarkModeEnabled:  GlobalValues.flagTheme.value,
             onStateChanged: (isDarkModeEnabled) {
-            setState(() {
-              this.isDarkModeEnabled = isDarkModeEnabled;
-            });
+              GlobalValues.flagTheme.value = isDarkModeEnabled;
             },
           ),
         ],

@@ -23,7 +23,7 @@ class _LoginScreenState extends State<LoginScreen> {
       decoration: const BoxDecoration(
         image: DecorationImage(
           image: NetworkImage(
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Mario_Series_Logo.svg/1280px-Mario_Series_Logo.svg.png')
+            'https://static.wikia.nocookie.net/dragoncity/images/e/e0/Azteca_1.png/revision/latest?cb=20140409224741&path-prefix=es')
         )
       ),
     );
